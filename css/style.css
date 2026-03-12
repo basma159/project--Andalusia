@@ -1,0 +1,8 @@
+@font-face {
+    font-family:'aligarh' ;
+    src: url(../aligarh-arabic-free-personal-use/AligarhArabicFREEPERSONALUSE-Black.otf);
+}
+body{
+        font-family:'aligarh' ;
+
+}
