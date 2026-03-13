@@ -14,7 +14,7 @@
 
 <body class=" h-[3000px] space-y-10 overflow-x-hidden m-0">
     <main id="main"
-        class="w-full mx-auto h-fit md:min-h-screen flex flex-col md:flex-row items-center gap-10 md:gap-8 px-4 md:px-6   py-8 bg-green-900">
+        class="w-full max-w-full h-fit md:min-h-screen flex flex-col md:flex-row items-center gap-10 md:gap-8 px-4 md:px-6   py-8 bg-green-900">
         <div class="w-full md:w-1/2 space-y-6">
             <h1 class="text-lg md:text-2xl font-extrabold text-amber-700">أندلس الحضارة: ثمانية قرون من الضياء</h1>
             <p class="text-base md:text-2xl !leading-relaxed text-white">استكشف قصة المجد التي سطّرتها الأندلس عبر قرونٍ
@@ -31,7 +31,7 @@
 
     </main>
 
-    <section id="sec1" class="w-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-8 px-4 md:px-12 ">
+    <section id="sec1" class="w-full  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-8 px-4 md:px-12 ">
 
         <div class="relative w-full  h-[500px]  rounded-2xl overflow-hidden shadow-xl shadow-amber-700 group "
             data-aos="fade-up">
@@ -69,7 +69,7 @@
     </section><!-- section-1 -->
 
     <section id="sec2"
-        class="w-full mx-auto flex flex-col md:flex-row items-center px-4 md:px-6 py-4 space-y-6 md:space-y-0 bg-green-900">
+        class="w-full  flex flex-col md:flex-row items-center px-4 md:px-6 py-4 space-y-6 md:space-y-0 bg-green-900">
 
         <div class="w-full md:w-1/2 space-y-6" data-aos="fade-right">
             <h2 class="text-3xl text-white">رؤية معاصرة للأندلس</h2>
@@ -119,7 +119,7 @@
         /* على الشاشات الصغيرة: نفضل contain عشان الفيديو ميتصش منه أجزاء */
         @media (max-width: 767px) {
             .plyr video {
-                object-fit: contain;
+                object-fit: cover;
             }
         }
     </style>
