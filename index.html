@@ -12,7 +12,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
-<body class=" h-[3000px] space-y-10 overflow-x-hidden">
+<body class=" h-[3000px] space-y-10 overflow-x-hidden scroll-m-3">
     <main id="main"
         class="w-full mx-auto min-h-screen flex flex-col md:flex-row items-center gap-10 md:gap-8 px-4 md:px-6  py-8 bg-green-900">
         <div class="w-full md:w-1/2 space-y-6">
@@ -80,9 +80,10 @@
         </div>
 
         <div class="w-full md:w-1/2 flex justify-center" data-aos="fade-left">
-            <div class="w-full max-w-full aspect-video rounded-2xl shadow-2xl overflow-hidden bg-black">
+            <div class="w-full aspect-video rounded-2xl shadow-2xl shadow-black/50 overflow-hidden bg-black">
                 <video id="player" src="videos/videoplayback.mp4" poster="images/photo_2026-03-12_21-34-55.jpg"
-                    class="w-full h-full object-contain md:object-cover" playsinline controls></video>
+                    playsinline controls>
+                </video>
             </div>
         </div>
 
@@ -96,22 +97,27 @@
     <style>
         :root {
             --plyr-color-main: #b45309;
+            /* لون Amber-700 */
             --plyr-video-border-radius: 1rem;
         }
 
+        /* لضمان أن المشغل يملأ الـ Container بالكامل */
         .plyr {
-            height: 100%;
-            width: 100%;
+            height: 100% !important;
+            width: 100% !important;
+            border-radius: 1rem;
+            overflow: hidden;
         }
 
-        @media (min-width:768px) {
+        /* على الشاشات الكبيرة: الفيديو يملأ المساحة (Cover) */
+        @media (min-width: 768px) {
             .plyr video {
                 object-fit: cover;
-
             }
         }
 
-        @media (min-width:767px) {
+        /* على الشاشات الصغيرة: نفضل contain عشان الفيديو ميتصش منه أجزاء */
+        @media (max-width: 767px) {
             .plyr video {
                 object-fit: contain;
             }
