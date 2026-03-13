@@ -104,8 +104,17 @@
             width: 100%;
         }
 
-        .plyr video {
-            object-fit: cover;
+        @media (min-width:768px) {
+            .plyr video {
+                object-fit: cover;
+
+            }
+        }
+
+        @media (min-width:767px) {
+            .plyr video {
+                object-fit: contain;
+            }
         }
     </style>
 
