@@ -1,7 +1,7 @@
 
 
 
-@font-face {
+/* @font-face {
     font-family: 'aligarh';
     src: url('../aligarh-arabic-free-personal-use/AligarhArabicFREEPERSONALUSE-Black.otf') format('opentype');
     font-weight: normal;
@@ -10,7 +10,7 @@
 
 body {
     font-family: 'aligarh', sans-serif;
-}
+} */
 
 *{
     padding:0;
