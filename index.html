@@ -21,27 +21,44 @@
     </style>
 </head>
 
-<body class="h-[5000px] selection:bg-amber-500 selection:text-white space-y-10 overflow-x-hidden m-0">
-    <main id="main" class="w-full max-w-full h-fit md:min-h-screen flex flex-col md:flex-row items-center gap-6 md:gap-8 px-4 md:px-6 
-          py-8 bg-emerald-950">
-        <div class="w-full md:w-1/2 space-y-6">
-            <h1 class="text-lg md:text-3xl font-extrabold text-amber-700">أندلس الحضارة: ثمانية قرون من الضياء</h1>
-            <p class="text-base md:text-2xl !leading-relaxed text-white">استكشف قصة المجد التي سطّرتها الأندلس عبر قرونٍ
-                من الإبداع، حيث
-                التقى الفن بالعلم، وازدهرت العمارة والثقافة لتصنع حضارةً أضاءت صفحات التاريخ ولا يزال أثرها حاضرًا حتى
-                اليوم.</p>
-            <button class="text-white font-extrabold text-xl bg-amber-700 px-10 py-4 rounded-xl transition-all duration-300
-         hover:bg-transparent border border-amber-700 hover:text-amber-700"><a href="#sec1">ابدأ الرحلة </a></button>
-        </div>
+<body class="h-[5000px] selection:bg-amber-600 selection:text-white space-y-10 overflow-x-hidden relative">
+    <header class="w-full h-14 bg-amber-700/80 fixed backdrop-blur-sm z-50 top-0 shadow-2xl shadow-gray-400">
+        <nav class="w-full h-14 flex gap-8 justify-center items-center">
+            <a href="#main"
+                class="text-2xl text-white p-4 hover:bg-emerald-950 hover:transition-all hover:duration-300 hover:rounded-3xl ">الرئيسية</a>
 
-        <div class="w-full md:w-1/2 ">
-            <img src="images/1.jpeg" class="rounded-2xl w-full" alt="">
-        </div>
+            <a href="#sec1"
+                class="text-2xl text-white p-4 hover:bg-emerald-950 hover:transition-all hover:duration-300 hover:rounded-3xl">المدن</a>
 
+            <a href="#sec3"
+                class="text-2xl text-white p-4 hover:bg-emerald-950 hover:transition-all hover:duration-300 hover:rounded-3xl">العلماء</a>
+        </nav>
+
+    </header>
+    <main id="main" class="w-full max-w-full h-fit md:min-h-screen mt-14 scroll-mt-14 pt-14">
+        <div class="w-full max-w-full h-fit md:min-h-screen scroll-mt-14 flex flex-col md:flex-row items-center gap-6
+     md:gap-8 px-4 md:px-6  py-8 bg-emerald-950">
+            <div class="w-full md:w-1/2 space-y-6 flex flex-col justify-center">
+                <h1 class="text-lg md:text-3xl font-extrabold text-amber-700 leading-snug">أندلس الحضارة: ثمانية قرون من
+                    الضياء</h1>
+                <p class="text-base md:text-2xl !leading-loose text-white ">استكشف قصة المجد التي سطّرتها الأندلس عبر
+                    قرونٍ
+                    من الإبداع، حيث
+                    التقى الفن بالعلم، وازدهرت العمارة والثقافة لتصنع حضارةً أضاءت صفحات التاريخ ولا يزال أثرها حاضرًا
+                    حتى
+                    اليوم.</p>
+                <a href="#sec1" class="w-fit text-white font-extrabold text-xl bg-amber-700 px-10 py-4 rounded-xl transition-all duration-300
+         hover:bg-transparent border border-amber-700 hover:text-amber-700">ابدأ الرحلة </a>
+            </div>
+
+            <div class="w-full md:w-1/2 ">
+                <img src="images/1.jpeg" class="rounded-2xl w-full shadow-2xl shadow-black/50" alt="">
+            </div>
+        </div>
     </main>
 
     <section id="sec1"
-        class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-8 px-4 md:px-12 space-y-4 md:space-y-0 ">
+        class="w-full scroll-mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-8 px-4 md:px-12 space-y-4 md:space-y-0 ">
 
         <div class="relative w-full  h-[500px]  rounded-2xl overflow-hidden shadow-xl shadow-black/50 group "
             data-aos="fade-up">
@@ -79,7 +96,7 @@
     </section><!-- section-1 -->
 
     <section id="sec2"
-        class="w-full mx-auto flex flex-col md:flex-row items-center px-4 md:px-6 py-8 space-y-6 md:space-y-0 bg-emerald-950">
+        class="w-full mx-auto scroll-mt-14 flex flex-col md:flex-row items-center px-4 md:px-6 py-8 space-y-6 md:space-y-0 bg-emerald-950">
 
         <div class="w-full md:w-1/2 space-y-6" data-aos="fade-up">
             <h1 class="text-lg md:text-3xl text-white font-extrabold">رؤية معاصرة للأندلس</h1>
@@ -99,7 +116,7 @@
     </section><!-- section-2 -->
 
 
-    <section id="sec3" class="w-full space-y-4 bg-orange-950  p-5">
+    <section id="sec3" class="w-full scroll-mt-14 space-y-4 bg-orange-950  p-5">
         <h1 class="w-full text-lg md:text-3xl flex justify-center  text-white "><i
                 class="fa-solid fa-star text-yellow-400"></i>
             أعلام من علماء الأندلس <i class="fa-solid fa-star text-yellow-400"></i>
