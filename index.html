@@ -21,30 +21,93 @@
     </style>
 </head>
 
-<body class=" selection:bg-amber-600 selection:text-white space-y-10 overflow-x-hidden relative">
-    <header class="w-full h-18 bg-amber-700/80 fixed backdrop-blur-sm z-50 top-0 shadow-2xl shadow-gray-400">
-        <nav class="w-full h-18 flex gap-8 justify-center items-center">
-            <a href="#main"
-                class="text-lg md:text-2xl font-bold text-white p-4 hover:bg-emerald-950 hover:transition-all hover:duration-300 hover:rounded-3xl ">الرئيسية</a>
 
-            <a href="#sec1"
-                class="text-lg md:text-2xl font-bold text-white p-4 hover:bg-emerald-950 hover:transition-all hover:duration-300 hover:rounded-3xl">المدن</a>
+<div id="loader" class="fixed inset-0 bg-white flex justify-center items-center z-50">
+    <h1 class="text-3xl font-bold text-amber-600 animate-pulse">
+        Loading...
+    </h1>
+</div>
 
-            <a href="#sec3"
-                class="text-lg md:text-2xl font-bold text-white p-4 hover:bg-emerald-950 hover:transition-all hover:duration-300 hover:rounded-3xl">العلماء</a>
-        </nav>
+<div id="progressBar" class="fixed top-0 left-0 h-2 bg-emerald-900 rounded-xl z-50"></div>
 
+
+<body class="h-[6000px] selection:bg-amber-600 scroll  selection:text-white space-y-10 overflow-x-hidden relative">
+
+
+    <header
+        class=" w-full fixed top-0 right-0 z-40 bg-amber-700/80 backdrop-blur-md py-4 px-4 shadow-2xl flex justify-around items-center gap-8 lg:gap-20 ">
+
+        <ul class="hidden md:flex gap-4 lg:gap-8 font-bold transition-all text-sm lg:text-lg">
+            <li
+                class="text-lg md:text-2xl font-bold p-4 text-white hover:bg-emerald-950 hover:transition-all hover:duration-300 hover:rounded-3xl">
+                <a href="#main">الرئيسية</a>
+            </li>
+            <li
+                class="text-lg md:text-2xl font-bold p-4 text-white hover:bg-emerald-950 hover:transition-all hover:duration-300 hover:rounded-3xl">
+                <a href="#sec1">المدن</a>
+            </li>
+            <li
+                class="text-lg md:text-2xl font-bold p-4 text-white hover:bg-emerald-950 hover:transition-all hover:duration-300 hover:rounded-3xl">
+                <a href="#sec2">رؤية معاصرة</a>
+            </li>
+            <li
+                class="text-lg md:text-2xl font-bold p-4 text-white hover:bg-emerald-950 hover:transition-all hover:duration-300 hover:rounded-3xl">
+                <a href="#sec3">العلماء</a>
+            </li>
+            <li
+                class="text-lg md:text-2xl font-bold p-4 text-white hover:bg-emerald-950 hover:transition-all hover:duration-300 hover:rounded-3xl">
+                <a href="#footer">تواصل معنا</a>
+            </li>
+        </ul>
+        <button id="menuBtn" class="text-2xl md:hidden">
+            <i id="menuId"
+                class="fa-solid fa-bars bg-emerald-950 text-xl py-2 px-4 rounded-md hover:cursor-pointer text-white"></i>
+
+        </button>
+        <ul id="menuMobile"
+            class="hidden absolute md:hidden w-fit flex-col justify-center items-center gap-10 font-bold  text-lg
+         top-28 right-5  bg-amber-700 py-4 px-10 shadow-md space-y-3 rounded-3xl transition-all duration-500 backdrop-blur-lg">
+            <li
+                class="text-lg md:text-2xl text-center font-bold p-4 text-white hover:bg-emerald-950 hover:transition-all hover:duration-300 hover:rounded-3xl">
+                <a href="#main">الرئيسية</a>
+            </li>
+            <li
+                class="text-lg md:text-2xl text-center font-bold p-4 text-white hover:bg-emerald-950 hover:transition-all hover:duration-300 hover:rounded-3xl">
+                <a href="#sec1">المدن</a>
+            </li>
+            <li
+                class="text-lg md:text-2xl text-center font-bold p-4 text-white hover:bg-emerald-950 hover:transition-all hover:duration-300 hover:rounded-3xl">
+                <a href="#sec2">رؤية معاصرة</a>
+            </li>
+            <li
+                class="text-lg md:text-2xl text-center font-bold p-4 text-white hover:bg-emerald-950 hover:transition-all hover:duration-300 hover:rounded-3xl">
+                <a href="#sec3">العلماء</a>
+            </li>
+            <li
+                class="text-lg md:text-2xl text-center font-bold p-4 text-white hover:bg-emerald-950 hover:transition-all hover:duration-300 hover:rounded-3xl">
+                <a href="#footer">تواصل معنا</a>
+            </li>
+
+        </ul>
+        <div class="flex gap-2 p-2 justify-center items-center rounded-2xl shadow-lg shadow-black/30">
+            <h3 class="text-white font-extrabold text-2xl">بوابة الأندلس</h3>
+            <img src="images/2.jpeg" class="rounded-2xl" width="50" height="50" alt="">
+        </div>
     </header>
-    <main id="main" class="w-full max-w-full h-fit lg:min-h-screen mt-14 scroll-mt-14 pt-14">
+
+    <main id="main" class="w-full max-w-full h-fit lg:min-h-screen mt-24 scroll-mt-14 pt-24">
         <div class="w-full max-w-full h-fit lg:min-h-screen scroll-mt-14 flex flex-col md:flex-row items-center gap-6
      md:gap-8 px-4 md:px-6  py-8 bg-emerald-950">
             <div class="w-full md:w-1/2 space-y-6 flex flex-col justify-center">
-                <h1 class="text-lg md:text-3xl font-extrabold text-amber-700 leading-snug">أندلس الحضارة: ثمانية قرون من
+                <h1 class="text-lg md:text-3xl font-extrabold text-amber-700 leading-snug">أندلس الحضارة: ثمانية
+                    قرون من
                     الضياء</h1>
-                <p class="text-base md:text-2xl !leading-loose text-white ">استكشف قصة المجد التي سطّرتها الأندلس عبر
+                <p class="text-base md:text-2xl !leading-loose text-white ">استكشف قصة المجد التي سطّرتها الأندلس
+                    عبر
                     قرونٍ
                     من الإبداع، حيث
-                    التقى الفن بالعلم، وازدهرت العمارة والثقافة لتصنع حضارةً أضاءت صفحات التاريخ ولا يزال أثرها حاضرًا
+                    التقى الفن بالعلم، وازدهرت العمارة والثقافة لتصنع حضارةً أضاءت صفحات التاريخ ولا يزال أثرها
+                    حاضرًا
                     حتى
                     اليوم.</p>
                 <a href="#sec1" class="w-fit text-white font-extrabold text-xl bg-amber-700 px-10 py-4 rounded-xl transition-all duration-300
@@ -58,7 +121,7 @@
     </main>
 
     <section id="sec1"
-        class="w-full scroll-mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-8 px-4 md:px-12 space-y-4 md:space-y-0 ">
+        class="w-full scroll-mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-8 px-4 md:px-12 space-y-4 md:space-y-0 ">
 
         <div class="relative w-full  h-[500px]  rounded-2xl overflow-hidden shadow-xl shadow-black/50 group "
             data-aos="fade-up">
@@ -96,12 +159,13 @@
     </section><!-- section-1 -->
 
     <section id="sec2"
-        class="w-full mx-auto scroll-mt-14 flex flex-col md:flex-row items-center px-4 md:px-6 py-8 space-y-6 md:space-y-0 bg-emerald-950">
+        class="w-full mx-auto scroll-mt-24 flex flex-col md:flex-row items-center px-4 md:px-6 py-8 space-y-6 md:space-y-0 bg-emerald-950">
 
         <div class="w-full md:w-1/2 space-y-6" data-aos="fade-up">
             <h1 class="text-lg md:text-3xl text-white font-extrabold">رؤية معاصرة للأندلس</h1>
             <p class="text-gray-200 text-base md:text-xl leading-relaxed">
-                استمع إلى الدكتور <span class="text-amber-700 font-bold">راغب السرجاني</span> وهو يستعرض ملامح العظمة في
+                استمع إلى الدكتور <span class="text-amber-700 font-bold">راغب السرجاني</span> وهو يستعرض ملامح
+                العظمة في
                 حضارة الأندلس، وكيف أصبحت منارة للعلم والقيم في وقت كان العالم يتخبط في ظلمات الجهل.
             </p>
         </div>
@@ -116,7 +180,7 @@
     </section><!-- section-2 -->
 
 
-    <section id="sec3" class="w-full scroll-mt-14 space-y-4 bg-orange-950  p-5">
+    <section id="sec3" class="w-full scroll-mt-24 space-y-4 bg-orange-950  p-5">
         <h1 class="w-full text-lg md:text-3xl flex justify-center  text-white "><i
                 class="fa-solid fa-star text-yellow-400"></i>
             أعلام من علماء الأندلس <i class="fa-solid fa-star text-yellow-400"></i>
@@ -206,13 +270,22 @@
     </section> <!-- section-3   -->
 
 
-    <section id="sec4">
+    <section id="sec4" class="carousel">
+        <div class="carousel">
+            <div class="track">
 
+                <div class="card">1</div>
+                <div class="card">2</div>
+                <div class="card">3</div>
+                <div class="card">4</div>
+            </div>
+        </div>
 
     </section> <!-- section-4   -->
 
 
 
+    <script src="js/script.js"></script>
 
     <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
     <script>
@@ -247,6 +320,9 @@
 
     <script>
         AOS.init();
+
+    </script>
+    <script>
 
     </script>
 </body>
