@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <style>
         body {
             font-family: 'Cairo', sans-serif;
@@ -20,6 +21,20 @@
             text-rendering: optimizeLegibility;
         }
     </style>
+    <style>
+.swiper-pagination-bullet{
+    width: 12px;
+    height: 12px;
+    background-color: white; /* emerald-900 */
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active{
+    width: 32px;
+    border-radius: 9999px;
+    background-color: rgb(217 119 6); /* amber-600 */
+}
+</style>
 </head>
 
 
@@ -32,10 +47,9 @@
 <div id="progressBar" class="fixed top-0 right-0 h-2 bg-emerald-900 rounded-xl z-50"></div>
 
 
-<body class="h-[6000px] selection:bg-amber-600 scroll selection:text-white space-y-10 overflow-x-hidden relative">
+<body class="h-[6000px] selection:bg-amber-600 scroll selection:text-white  overflow-x-hidden relative">
 
-    <header
-        class=" w-full fixed right-0 z-40 bg-amber-700/80 backdrop-blur-md py-4 px-4 shadow-2xl flex 
+    <header class=" w-full fixed top-0 right-0 z-40 bg-amber-700/80 backdrop-blur-md py-4 px-4 shadow-2xl flex 
         justify-around items-center gap-8 lg:gap-20 ">
 
         <ul class="hidden md:flex gap-4 lg:gap-8 font-bold transition-all text-sm lg:text-lg">
@@ -122,7 +136,7 @@
     </main>
 
     <section id="sec1"
-        class="w-full scroll-mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-8 px-4 md:px-12 space-y-4 md:space-y-0 ">
+        class="w-full scroll-mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-8 px-4 md:px-12 space-y-4 md:space-y-0 my-10 ">
 
         <div class="relative w-full  h-[500px]  rounded-2xl overflow-hidden shadow-xl shadow-black/50 group "
             data-aos="fade-up">
@@ -181,7 +195,7 @@
     </section><!-- section-2 -->
 
 
-    <section id="sec3" class="w-full scroll-mt-24 space-y-4 bg-orange-950  p-5">
+    <section id="sec3" class="w-full scroll-mt-24 space-y-4 bg-orange-950  p-5 my-10">
         <h1 class="w-full text-lg md:text-3xl flex justify-center  text-white "><i
                 class="fa-solid fa-star text-yellow-400"></i>
             أعلام من علماء الأندلس <i class="fa-solid fa-star text-yellow-400"></i>
@@ -271,18 +285,63 @@
     </section> <!-- section-3   -->
 
 
-    <section id="sec4" class="carousel">
-        <div class="carousel">
-            <div class="track">
 
-                <div class="card">1</div>
-                <div class="card">2</div>
-                <div class="card">3</div>
-                <div class="card">4</div>
+    <section id="sec4" class="w-full min-h-screen bg-emerald-950 flex justify-center items-center my-10">
+        <!-- Slider main container -->
+        <div class="swiper w-[80%] h-[80vh]">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide w-[300px] h-[450px] "><img class="w-full h-full object-cover rounded-xl ring-2 ring-amber-400" src="images/مجلد جديد/photo_٢٠٢٦-٠٤-٠٨_١٢-٠٧-٠٨.jpg" alt=""></div>
+                <div class="swiper-slide w-[300px] h-[450px] "><img class="w-full h-full object-cover rounded-xl ring-2 ring-amber-300" src="images/مجلد جديد/photo_٢٠٢٦-٠٤-٠٨_١٢-٠٧-٠٩.jpg" alt=""></div>
+                <div class="swiper-slide w-[300px] h-[450px] "><img class="w-full h-full object-cover rounded-xl ring-2 ring-amber-300" src="images/مجلد جديد/photo_٢٠٢٦-٠٤-٠٨_١٢-٠٧-١٠.jpg" alt=""></div>
+                <div class="swiper-slide w-[300px] h-[450px] "><img class="w-full h-full object-cover rounded-xl ring-2 ring-amber-300" src="images/مجلد جديد/photo_٢٠٢٦-٠٤-٠٨_١٢-٠٧-١٢ (2).jpg" alt=""></div>
+                <div class="swiper-slide w-[300px] h-[450px] "><img class="w-full h-full object-cover rounded-xl ring-2 ring-amber-300" src="images/مجلد جديد/photo_٢٠٢٦-٠٤-٠٨_١٢-٠٧-١٢.jpg" alt=""></div>
+                <div class="swiper-slide w-[300px] h-[450px] "><img class="w-full h-full object-cover rounded-xl ring-2 ring-amber-300" src="images/مجلد جديد/photo_٢٠٢٦-٠٤-٠٨_١٢-٠٧-١٣ (2).jpg" alt=""></div>
+                
             </div>
-        </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination "></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <!-- <div class="swiper-scrollbar"></div>
+        </div> -->
 
     </section> <!-- section-4   -->
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+
+  <script>
+    var swiper = new Swiper(".swiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      loop:true,
+      slidesPerView: "auto",
+      autoplay:{
+        delay:1000
+      },
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 200,
+        modifier: 3,
+        slideShadows: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable:true,
+      },
+    });
+  </script>
 
 
 
