@@ -46,373 +46,390 @@
     </h1>
 </div>
 
-<div id="progressBar" class="fixed top-0 right-0 h-2 bg-emerald-900 rounded-xl z-50"></div>
-
-
-<body class="h-[6000px] cursor-none selection:bg-amber-600 scroll selection:text-white  overflow-x-hidden relative">
-    <!-- Progress Bar -->
     <div id="progressBar" class="fixed top-0 right-0 h-[5px] w-0 z-[9999]
         bg-gradient-to-r from-green-700 via-lime-600 to-yellow-500
         shadow-[0_0_15px_rgba(212,175,55,.7)]">
     </div>
 
-    <!-- Andalusian Cursor -->
-    <div id="cursor" class="fixed top-0 left-0 w-5 h-5 z-[99999]
-        pointer-events-none
-        bg-gradient-to-br from-yellow-300 to-yellow-600
-        shadow-[0_0_15px_rgba(212,175,55,.8)]
-        transition-transform duration-75">
-    </div>
-
-    <header class=" w-full fixed top-0 right-0 z-40 bg-amber-700/80 backdrop-blur-md py-4 px-4 shadow-2xl flex 
+<body class=" selection:bg-amber-600 scroll selection:text-white  overflow-x-hidden relative">
+    
+<header class=" w-full fixed top-0 right-0 z-40 bg-amber-700/80 backdrop-blur-md py-4 px-4 shadow-2xl flex 
         justify-around items-center gap-8 lg:gap-20 ">
 
-        <ul class="hidden md:flex gap-2 lg:gap-6 lg:font-bold transition-all text-sm lg:text-lg">
-            <li
-                class="text-lg lg:text-2xl font-bold p-4 text-white hover:bg-emerald-950 hover:transition-all hover:duration-300 hover:rounded-3xl">
-                <a href="#main">الرئيسية</a>
-            </li>
-            <li
-                class="text-lg lg:text-2xl font-bold p-4 text-white hover:bg-emerald-950 hover:transition-all hover:duration-300 hover:rounded-3xl">
-                <a href="#sec1">المدن</a>
-            </li>
-            <li
-                class="text-lg lg:text-2xl font-bold p-4 text-white hover:bg-emerald-950 hover:transition-all hover:duration-300 hover:rounded-3xl">
-                <a href="#sec2">رؤية معاصرة</a>
-            </li>
-            <li
-                class="text-lg lg:text-2xl font-bold p-4 text-white hover:bg-emerald-950 hover:transition-all hover:duration-300 hover:rounded-3xl">
-                <a href="#sec3">العلماء</a>
-            </li>
-            <li
-                class="text-lg lg:text-2xl font-bold p-4 text-white hover:bg-emerald-950 hover:transition-all hover:duration-300 hover:rounded-3xl">
-                <a href="#footer">تواصل معنا</a>
-            </li>
-        </ul>
-        <button id="menuBtn" class="text-2xl md:hidden">
-            <i id="menuId"
-                class="fa-solid fa-bars bg-emerald-950 text-xl py-2 px-4 rounded-md hover:cursor-pointer text-white"></i>
+    <ul class="hidden md:flex gap-2 lg:gap-6 lg:font-bold transition-all text-sm lg:text-lg">
+        <li
+            class="text-lg lg:text-2xl font-bold p-4 text-white hover:bg-emerald-950 hover:transition-all hover:duration-300 hover:rounded-3xl">
+            <a href="#main">الرئيسية</a>
+        </li>
+        <li
+            class="text-lg lg:text-2xl font-bold p-4 text-white hover:bg-emerald-950 hover:transition-all hover:duration-300 hover:rounded-3xl">
+            <a href="#sec1">المدن</a>
+        </li>
+        <li
+            class="text-lg lg:text-2xl font-bold p-4 text-white hover:bg-emerald-950 hover:transition-all hover:duration-300 hover:rounded-3xl">
+            <a href="#sec2">رؤية معاصرة</a>
+        </li>
+        <li
+            class="text-lg lg:text-2xl font-bold p-4 text-white hover:bg-emerald-950 hover:transition-all hover:duration-300 hover:rounded-3xl">
+            <a href="#sec3">العلماء</a>
+        </li>
+        <li
+            class="text-lg lg:text-2xl font-bold p-4 text-white hover:bg-emerald-950 hover:transition-all hover:duration-300 hover:rounded-3xl">
+            <a href="#footer">تواصل معنا</a>
+        </li>
+    </ul>
+    <button id="menuBtn" class="text-2xl md:hidden">
+        <i id="menuId"
+            class="fa-solid fa-bars bg-emerald-950 text-xl py-2 px-4 rounded-md hover:cursor-pointer text-white"></i>
 
-        </button>
-        <ul id="menuMobile"
-            class="hidden absolute md:hidden w-fit flex-col justify-center items-center gap-10 font-bold  text-lg
+    </button>
+    <ul id="menuMobile"
+        class="hidden absolute md:hidden w-fit flex-col justify-center items-center gap-10 font-bold  text-lg
          top-28 right-5  bg-amber-700 py-4 px-10 shadow-md space-y-3 rounded-3xl transition-all duration-500 backdrop-blur-lg">
-            <li
-                class="text-lg md:text-2xl text-center font-bold p-4 text-white hover:bg-emerald-950 hover:transition-all hover:duration-300 hover:rounded-3xl">
-                <a href="#main">الرئيسية</a>
-            </li>
-            <li
-                class="text-lg md:text-2xl text-center font-bold p-4 text-white hover:bg-emerald-950 hover:transition-all hover:duration-300 hover:rounded-3xl">
-                <a href="#sec1">المدن</a>
-            </li>
-            <li
-                class="text-lg md:text-2xl text-center font-bold p-4 text-white hover:bg-emerald-950 hover:transition-all hover:duration-300 hover:rounded-3xl">
-                <a href="#sec2">رؤية معاصرة</a>
-            </li>
-            <li
-                class="text-lg md:text-2xl text-center font-bold p-4 text-white hover:bg-emerald-950 hover:transition-all hover:duration-300 hover:rounded-3xl">
-                <a href="#sec3">العلماء</a>
-            </li>
-            <li
-                class="text-lg md:text-2xl text-center font-bold p-4 text-white hover:bg-emerald-950 hover:transition-all hover:duration-300 hover:rounded-3xl">
-                <a href="#footer">تواصل معنا</a>
-            </li>
+        <li
+            class="text-lg md:text-2xl text-center font-bold p-4 text-white hover:bg-emerald-950 hover:transition-all hover:duration-300 hover:rounded-3xl">
+            <a href="#main">الرئيسية</a>
+        </li>
+        <li
+            class="text-lg md:text-2xl text-center font-bold p-4 text-white hover:bg-emerald-950 hover:transition-all hover:duration-300 hover:rounded-3xl">
+            <a href="#sec1">المدن</a>
+        </li>
+        <li
+            class="text-lg md:text-2xl text-center font-bold p-4 text-white hover:bg-emerald-950 hover:transition-all hover:duration-300 hover:rounded-3xl">
+            <a href="#sec2">رؤية معاصرة</a>
+        </li>
+        <li
+            class="text-lg md:text-2xl text-center font-bold p-4 text-white hover:bg-emerald-950 hover:transition-all hover:duration-300 hover:rounded-3xl">
+            <a href="#sec3">العلماء</a>
+        </li>
+        <li
+            class="text-lg md:text-2xl text-center font-bold p-4 text-white hover:bg-emerald-950 hover:transition-all hover:duration-300 hover:rounded-3xl">
+            <a href="#footer">تواصل معنا</a>
+        </li>
 
-        </ul>
-        <div
-            class="flex shrink-0 gap-2 p-2 justify-center items-center rounded-2xl shadow-md lg:shadow-lg shadow-black/30">
-            <h3 class="text-white font-extrabold lg:text-2xl">حضارة الأندلس</h3>
-            <img src="images/2.jpeg" class="rounded-2xl" width="50" height="50" alt="">
-        </div>
-    </header>
+    </ul>
+    <div class="flex shrink-0 gap-2 p-2 justify-center items-center rounded-2xl shadow-md lg:shadow-lg shadow-black/30">
+        <h3 class="text-white font-extrabold lg:text-2xl">حضارة الأندلس</h3>
+        <img src="images/2.jpeg" class="rounded-2xl" width="50" height="50" alt="">
+    </div>
+</header>
 
-    <main id="main" class="w-full max-w-full h-fit lg:min-h-screen mt-24 scroll-mt-24">
-        <div class="w-full max-w-full h-fit lg:min-h-screen scroll-mt-14 flex flex-col md:flex-row items-center gap-6
+<main id="main" class="w-full max-w-full h-fit lg:min-h-screen mt-24 scroll-mt-24">
+    <div class="w-full max-w-full h-fit lg:min-h-screen scroll-mt-14 flex flex-col md:flex-row items-center gap-6
      md:gap-8 px-4 md:px-6  py-8 bg-emerald-950">
-            <div class="w-full md:w-1/2 space-y-6 flex flex-col justify-center">
-                <h1 class="text-lg md:text-3xl font-extrabold text-amber-700 leading-snug">أندلس الحضارة: ثمانية
-                    قرون من
-                    الضياء</h1>
-                <p class="text-base md:text-2xl !leading-loose text-white ">استكشف قصة المجد التي سطّرتها الأندلس
-                    عبر
-                    قرونٍ
-                    من الإبداع، حيث
-                    التقى الفن بالعلم، وازدهرت العمارة والثقافة لتصنع حضارةً أضاءت صفحات التاريخ ولا يزال أثرها
-                    حاضرًا
-                    حتى
-                    اليوم.</p>
-                <a href="#sec1" class="w-fit text-white font-extrabold text-xl bg-amber-700 px-10 py-4 rounded-xl transition-all duration-300
+        <div class="w-full md:w-1/2 space-y-6 flex flex-col justify-center">
+            <h1 class="text-lg md:text-3xl font-extrabold text-amber-700 leading-snug">أندلس الحضارة: ثمانية
+                قرون من
+                الضياء</h1>
+            <p class="text-base md:text-2xl !leading-loose text-white ">استكشف قصة المجد التي سطّرتها الأندلس
+                عبر
+                قرونٍ
+                من الإبداع، حيث
+                التقى الفن بالعلم، وازدهرت العمارة والثقافة لتصنع حضارةً أضاءت صفحات التاريخ ولا يزال أثرها
+                حاضرًا
+                حتى
+                اليوم.</p>
+            <a href="#sec1" class="w-fit text-white font-extrabold text-xl bg-amber-700 px-10 py-4 rounded-xl transition-all duration-300
          hover:bg-transparent border border-amber-700 hover:text-amber-700">ابدأ الرحلة </a>
-            </div>
-
-            <div class="w-full md:w-1/2 ">
-                <img src="images/1.jpeg" class="rounded-2xl w-full shadow-2xl shadow-black/50" alt="">
-            </div>
-        </div>
-    </main>
-
-    <section id="sec1"
-        class="w-full scroll-mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-8 px-4 md:px-12 space-y-4 md:space-y-0 my-10 ">
-
-        <div class="relative w-full  h-[500px]  rounded-2xl overflow-hidden shadow-xl shadow-black/50 group "
-            data-aos="fade-up">
-            <img src="images/من قصر الحمراء، قرطبة، الأندلس، اسبانيا from AlHambra Palace, Cordoba, Spain.jpeg"
-                class=" absolute object-cover w-full h-full group-hover:scale-110 transition duration-500 " alt="">
-            <div class="overlay absolute flex flex-col opacity-0 justify-center items-center inset-0 w-full  gap-6
-            group-hover:opacity-100  group-hover:backdrop-blur-sm group-hover:bg-black/40 transition duration-500">
-                <h2 class="text-3xl text-amber-500 font-extrabold">قرطبة</h2>
-                <p class="text-2xl text-white">جوهرة العالم</p>
-            </div><!-- overlay -->
-        </div> <!-- card-1 -->
-
-        <div class="relative w-full h-[500px]  rounded-2xl overflow-hidden shadow-xl shadow-black/50 group"
-            data-aos="fade-up">
-            <img src="images/قصر الحمراء _ غرناطة.jpeg"
-                class=" absolute object-cover w-full h-full group-hover:scale-110 transition duration-500" alt="">
-            <div class="overlay absolute flex flex-col opacity-0 justify-center items-center inset-0 w-full  gap-6
-            group-hover:opacity-100  group-hover:backdrop-blur-sm group-hover:bg-black/40 transition duration-500">
-                <h2 class="text-3xl text-amber-500 font-extrabold">غرناطة</h2>
-                <p class="text-2xl text-white"> آخر معاقل المجد</p>
-            </div><!-- overlay -->
-        </div> <!-- card-2 -->
-
-        <div class="relative w-full h-[500px] rounded-2xl overflow-hidden shadow-xl shadow-black/50 group"
-            data-aos="fade-up">
-            <img src="images/Real Alcázar de Sevilla.jpeg"
-                class=" absolute object-cover w-full h-full group-hover:scale-110 transition duration-500" alt="">
-            <div class="overlay absolute flex flex-col opacity-0 justify-center items-center inset-0 w-full  gap-6
-            group-hover:opacity-100  group-hover:backdrop-blur-sm group-hover:bg-black/40 transition duration-500">
-                <h2 class="text-3xl text-amber-500 font-extrabold">إشبيلية</h2>
-                <p class="text-2xl text-white"> عروس الوادي الكبير</p>
-            </div><!-- overlay -->
-        </div> <!-- card-3 -->
-
-    </section><!-- section-1 -->
-
-    <section id="sec2"
-        class="w-full mx-auto scroll-mt-24 flex flex-col md:flex-row items-center px-4 md:px-6 py-8 space-y-6 md:space-y-0 bg-emerald-950">
-
-        <div class="w-full md:w-1/2 space-y-6" data-aos="fade-up">
-            <h1 class="text-lg md:text-3xl text-white font-extrabold">رؤية معاصرة للأندلس</h1>
-            <p class="text-gray-200 text-base md:text-xl leading-relaxed">
-                استمع إلى الدكتور <span class="text-amber-700 font-bold">راغب السرجاني</span> وهو يستعرض ملامح
-                العظمة في
-                حضارة الأندلس، وكيف أصبحت منارة للعلم والقيم في وقت كان العالم يتخبط في ظلمات الجهل.
-            </p>
         </div>
 
-        <div class="w-full md:w-1/2 flex justify-center" data-aos="fade-up">
-            <div class="w-full max-w-full aspect-video rounded-2xl shadow-2xl overflow-hidden bg-black">
-                <video id="player" src="videos/videoplayback.mp4" poster="images/photo_2026-03-12_21-34-55.jpg"
-                    class="w-full h-full object-contain md:object-cover" playsinline controls></video>
-            </div>
+        <div class="w-full md:w-1/2 ">
+            <img src="images/1.jpeg" class="rounded-2xl w-full shadow-2xl shadow-black/50" alt="">
         </div>
+    </div>
+</main>
 
-    </section><!-- section-2 -->
+<section id="sec1"
+    class="w-full scroll-mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-8 px-4 md:px-12 space-y-4 md:space-y-0 my-10 ">
+
+    <div class="relative w-full  h-[500px]  rounded-2xl overflow-hidden shadow-xl shadow-black/50 group "
+        data-aos="fade-up">
+        <img src="images/من قصر الحمراء، قرطبة، الأندلس، اسبانيا from AlHambra Palace, Cordoba, Spain.jpeg"
+            class=" absolute object-cover w-full h-full group-hover:scale-110 transition duration-500 " alt="">
+        <div class="overlay absolute flex flex-col opacity-0 justify-center items-center inset-0 w-full  gap-6
+            group-hover:opacity-100  group-hover:backdrop-blur-sm group-hover:bg-black/40 transition duration-500">
+            <h2 class="text-3xl text-amber-500 font-extrabold">قرطبة</h2>
+            <p class="text-2xl text-white">جوهرة العالم</p>
+        </div><!-- overlay -->
+    </div> <!-- card-1 -->
+
+    <div class="relative w-full h-[500px]  rounded-2xl overflow-hidden shadow-xl shadow-black/50 group"
+        data-aos="fade-up">
+        <img src="images/قصر الحمراء _ غرناطة.jpeg"
+            class=" absolute object-cover w-full h-full group-hover:scale-110 transition duration-500" alt="">
+        <div class="overlay absolute flex flex-col opacity-0 justify-center items-center inset-0 w-full  gap-6
+            group-hover:opacity-100  group-hover:backdrop-blur-sm group-hover:bg-black/40 transition duration-500">
+            <h2 class="text-3xl text-amber-500 font-extrabold">غرناطة</h2>
+            <p class="text-2xl text-white"> آخر معاقل المجد</p>
+        </div><!-- overlay -->
+    </div> <!-- card-2 -->
+
+    <div class="relative w-full h-[500px] rounded-2xl overflow-hidden shadow-xl shadow-black/50 group"
+        data-aos="fade-up">
+        <img src="images/Real Alcázar de Sevilla.jpeg"
+            class=" absolute object-cover w-full h-full group-hover:scale-110 transition duration-500" alt="">
+        <div class="overlay absolute flex flex-col opacity-0 justify-center items-center inset-0 w-full  gap-6
+            group-hover:opacity-100  group-hover:backdrop-blur-sm group-hover:bg-black/40 transition duration-500">
+            <h2 class="text-3xl text-amber-500 font-extrabold">إشبيلية</h2>
+            <p class="text-2xl text-white"> عروس الوادي الكبير</p>
+        </div><!-- overlay -->
+    </div> <!-- card-3 -->
+
+</section><!-- section-1 -->
+
+<section id="sec2"
+    class="w-full mx-auto scroll-mt-24 flex flex-col md:flex-row items-center px-4 md:px-6 py-8 space-y-6 md:space-y-0 bg-emerald-950">
+
+    <div class="w-full md:w-1/2 space-y-6" data-aos="fade-up">
+        <h1 class="text-lg md:text-3xl text-white font-extrabold">رؤية معاصرة للأندلس</h1>
+        <p class="text-gray-200 text-base md:text-xl leading-relaxed">
+            استمع إلى الدكتور <span class="text-amber-700 font-bold">راغب السرجاني</span> وهو يستعرض ملامح
+            العظمة في
+            حضارة الأندلس، وكيف أصبحت منارة للعلم والقيم في وقت كان العالم يتخبط في ظلمات الجهل.
+        </p>
+    </div>
+
+    <div class="w-full md:w-1/2 flex justify-center" data-aos="fade-up">
+        <div class="w-full max-w-full aspect-video rounded-2xl shadow-2xl overflow-hidden bg-black">
+            <video id="player" src="videos/videoplayback.mp4" poster="images/photo_2026-03-12_21-34-55.jpg"
+                class="w-full h-full object-contain md:object-cover" playsinline controls></video>
+        </div>
+    </div>
+
+</section><!-- section-2 -->
 
 
-    <section id="sec3" class="w-full scroll-mt-24 space-y-4   p-5 my-10">
-        <h1 class="w-full text-lg md:text-3xl flex justify-center gap-2 text-amber-800 font-extrabold  "><i
-                class="fa-solid fa-star text-yellow-400"></i>
-            أعلام من علماء الأندلس <i class="fa-solid fa-star text-yellow-400"></i>
-        </h1>
+<section id="sec3" class="w-full scroll-mt-24 space-y-4   p-5 my-10">
+    <h1 class="w-full text-lg md:text-3xl flex justify-center gap-2 text-amber-800 font-extrabold  "><i
+            class="fa-solid fa-star text-yellow-400"></i>
+        أعلام من علماء الأندلس <i class="fa-solid fa-star text-yellow-400"></i>
+    </h1>
 
-        <div
-            class=" w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 py-8 px-4 md:px-12 space-y-4 md:space-y-0">
+    <div class=" w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 py-8 px-4 md:px-12 space-y-4 md:space-y-0">
 
-            <div class=" w-full h-[350px] rounded-2xl flex flex-col ring-2 ring-amber-600 shadow-2xl shadow-black  
+        <div class=" w-full h-[350px] rounded-2xl flex flex-col ring-2 ring-amber-600 shadow-2xl shadow-black  
             items-center transition-all  duration-500 overflow-hidden relative group" data-aos="fade-up">
-                <img src="images/photo_2026-03-16_02-11-52.jpg"
-                    class="absolute w-full h-full transform-gpu group-hover:scale-125 transition-all  duration-500 object-cover"
-                    alt="">
+            <img src="images/photo_2026-03-16_02-11-52.jpg"
+                class="absolute w-full h-full transform-gpu group-hover:scale-125 transition-all  duration-500 object-cover"
+                alt="">
 
-                <div class="relative w-full h-full flex flex-col  items-center justify-center gap-1 ">
-                    <h2 class="absolute drop-shadow-lg text-amber-600 backdrop-blur-xl font-extrabold text-2xl  transition-all  duration-500
+            <div class="relative w-full h-full flex flex-col  items-center justify-center gap-1 ">
+                <h2 class="absolute drop-shadow-lg text-amber-600 backdrop-blur-xl font-extrabold text-2xl  transition-all  duration-500
                  group-hover:-translate-y-6"> ابن رشد </h2>
 
-                    <div class="overlay text-amber-300 p-2 rounded-2xl flex flex-col justify-center items-center gap-5 
+                <div class="overlay text-amber-300 p-2 rounded-2xl flex flex-col justify-center items-center gap-5 
                 transition-all  duration-500  absolute opacity-0 translate-y-96 group-hover:translate-y-20  
                      group-hover:bg-emerald-900/90 group-hover:backdrop-blur-sm  group-hover:opacity-100 text-center">
-                        <p class="text-lg">المجال: الفلسفة والطب</p>
-                        <span class="text-sm">الإنجاز: فيلسوف وطبيب شرح أعمال أرسطو</span>
-                    </div><!--overlay-1 -->
-                </div>
-            </div><!-- card-1 -->
+                    <p class="text-lg">المجال: الفلسفة والطب</p>
+                    <span class="text-sm">الإنجاز: فيلسوف وطبيب شرح أعمال أرسطو</span>
+                </div><!--overlay-1 -->
+            </div>
+        </div><!-- card-1 -->
 
-            <div class=" w-full h-[350px] rounded-2xl flex flex-col ring-2 ring-amber-600 shadow-2xl shadow-black  
+        <div class=" w-full h-[350px] rounded-2xl flex flex-col ring-2 ring-amber-600 shadow-2xl shadow-black  
             items-center  transition-all  duration-500 overflow-hidden relative  group" data-aos="fade-up">
-                <img src="images/photo_2026-03-16_02-18-52-removebg-preview.png"
-                    class="absolute w-full h-full transform-gpu group-hover:scale-125 transition-all  duration-500 object-cover"
-                    alt="">
+            <img src="images/photo_2026-03-16_02-18-52-removebg-preview.png"
+                class="absolute w-full h-full transform-gpu group-hover:scale-125 transition-all  duration-500 object-cover"
+                alt="">
 
-                <div class="relative w-full h-full flex flex-col  items-center justify-center gap-1 ">
-                    <h2 class="absolute text-amber-600 backdrop-blur-xl font-extrabold text-2xl  transition-all  duration-500
+            <div class="relative w-full h-full flex flex-col  items-center justify-center gap-1 ">
+                <h2 class="absolute text-amber-600 backdrop-blur-xl font-extrabold text-2xl  transition-all  duration-500
                  group-hover:-translate-y-6">الزهراوي</h2>
 
-                    <div class="overlay text-amber-300 p-2 rounded-2xl flex flex-col justify-center items-center gap-5 
+                <div class="overlay text-amber-300 p-2 rounded-2xl flex flex-col justify-center items-center gap-5 
                 transition-all  duration-500 opacity-0 absolute translate-y-96 group-hover:translate-y-20  group-hover:opacity-100
                      group-hover:bg-emerald-900/90 group-hover:backdrop-blur-sm text-center">
-                        <p class="text-lg">المجال: الطب والجراحة</p>
-                        <span class="text-sm">الإنجاز: مؤسس علم الجراحة الحديثة</span>
-                    </div><!-- overlay-2 -->
-                </div>
-            </div><!-- card-2 -->
+                    <p class="text-lg">المجال: الطب والجراحة</p>
+                    <span class="text-sm">الإنجاز: مؤسس علم الجراحة الحديثة</span>
+                </div><!-- overlay-2 -->
+            </div>
+        </div><!-- card-2 -->
 
-            <div class=" w-full h-[350px] rounded-2xl flex flex-col ring-2 ring-amber-600 shadow-2xl shadow-black  
+        <div class=" w-full h-[350px] rounded-2xl flex flex-col ring-2 ring-amber-600 shadow-2xl shadow-black  
             items-center  transition-all  duration-500 overflow-hidden relative  group" data-aos="fade-up">
-                <img src="images/photo_2026-03-16_01-40-59.jpg"
-                    class="absolute w-full h-full transform-gpu group-hover:scale-125 transition-all  duration-500 object-cover"
-                    alt="">
+            <img src="images/photo_2026-03-16_01-40-59.jpg"
+                class="absolute w-full h-full transform-gpu group-hover:scale-125 transition-all  duration-500 object-cover"
+                alt="">
 
-                <div class="relative w-full h-full flex flex-col  items-center justify-center gap-1 ">
-                    <h2 class="absolute  text-amber-600 backdrop-blur-xl font-extrabold text-2xl  transition-all  duration-500
+            <div class="relative w-full h-full flex flex-col  items-center justify-center gap-1 ">
+                <h2 class="absolute  text-amber-600 backdrop-blur-xl font-extrabold text-2xl  transition-all  duration-500
                  group-hover:-translate-y-6">عباس بن فرناس</h2>
 
-                    <div class="overlay text-amber-300 p-2 rounded-2xl flex flex-col justify-center items-center gap-5 
+                <div class="overlay text-amber-300 p-2 rounded-2xl flex flex-col justify-center items-center gap-5 
                 transition-all  duration-500 opacity-0 absolute translate-y-96 group-hover:translate-y-20  group-hover:opacity-100
                      group-hover:bg-emerald-900/90 group-hover:backdrop-blur-sm text-center">
-                        <p class="text-lg">المجال: الهندسة والطيران </p>
-                        <span class="text-sm">الإنجاز: أول تجربة طيران في التاريخ</span>
-                    </div><!-- overlay-3 -->
-                </div>
-            </div><!-- card-3 -->
+                    <p class="text-lg">المجال: الهندسة والطيران </p>
+                    <span class="text-sm">الإنجاز: أول تجربة طيران في التاريخ</span>
+                </div><!-- overlay-3 -->
+            </div>
+        </div><!-- card-3 -->
 
-            <div class=" w-full h-[350px] rounded-2xl flex flex-col ring-2 ring-amber-600 shadow-2xl shadow-black
+        <div class=" w-full h-[350px] rounded-2xl flex flex-col ring-2 ring-amber-600 shadow-2xl shadow-black
             items-center  transition-all  duration-500 overflow-hidden relative  group" data-aos="fade-up">
-                <img src="images/photo_2026-03-16_02-14-44.jpg"
-                    class="absolute w-full h-full transform-gpu group-hover:scale-125 transition-all  duration-500 object-cover"
-                    alt="">
+            <img src="images/photo_2026-03-16_02-14-44.jpg"
+                class="absolute w-full h-full transform-gpu group-hover:scale-125 transition-all  duration-500 object-cover"
+                alt="">
 
-                <div class="relative w-full h-full flex flex-col  items-center justify-center gap-1 ">
-                    <h2 class="absolute text-amber-600 backdrop-blur-xl font-extrabold text-2xl  transition-all  duration-500
+            <div class="relative w-full h-full flex flex-col  items-center justify-center gap-1 ">
+                <h2 class="absolute text-amber-600 backdrop-blur-xl font-extrabold text-2xl  transition-all  duration-500
                  group-hover:-translate-y-6">ابن زهر</h2>
 
-                    <div class="overlay text-amber-300 p-2 rounded-2xl flex flex-col justify-center items-center gap-5 
+                <div class="overlay text-amber-300 p-2 rounded-2xl flex flex-col justify-center items-center gap-5 
                 transition-all  duration-500 opacity-0 absolute translate-y-96 group-hover:translate-y-20  group-hover:opacity-100
                      group-hover:bg-emerald-900/90 group-hover:backdrop-blur-sm text-center">
-                        <p class="text-lg">المجال: الطب</p>
-                        <span class="text-sm">الإنجاز: من كبار أطباء الأندلس</span>
-                    </div><!-- overlay4 -->
-                </div>
-            </div><!-- card-4 -->
-
-        </div><!-- container   -->
-
-    </section> <!-- section-3   -->
-
-
-
-    <section id="sec4" class="w-full min-h-screen bg-emerald-950 flex justify-center items-center my-10">
-        <!-- Slider main container -->
-        <div class="swiper w-[80%] h-[80vh]">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper py-4">
-                <!-- Slides -->
-                <div class="swiper-slide w-[300px] h-[450px] "><img
-                        class="w-full h-full object-cover rounded-xl ring-2 ring-amber-400"
-                        src="images/مجلد جديد/photo_٢٠٢٦-٠٤-٠٨_١٢-٠٧-٠٨.jpg" alt=""></div>
-                <div class="swiper-slide w-[300px] h-[450px] "><img
-                        class="w-full h-full object-cover rounded-xl ring-2 ring-amber-300"
-                        src="images/مجلد جديد/photo_٢٠٢٦-٠٤-٠٨_١٢-٠٧-٠٩.jpg" alt=""></div>
-                <div class="swiper-slide w-[300px] h-[450px] "><img
-                        class="w-full h-full object-cover rounded-xl ring-2 ring-amber-300"
-                        src="images/مجلد جديد/photo_٢٠٢٦-٠٤-٠٨_١٢-٠٧-١٠.jpg" alt=""></div>
-                <div class="swiper-slide w-[300px] h-[450px] "><img
-                        class="w-full h-full object-cover rounded-xl ring-2 ring-amber-300"
-                        src="images/مجلد جديد/photo_٢٠٢٦-٠٤-٠٨_١٢-٠٧-١٢ (2).jpg" alt=""></div>
-                <div class="swiper-slide w-[300px] h-[450px] "><img
-                        class="w-full h-full object-cover rounded-xl ring-2 ring-amber-300"
-                        src="images/مجلد جديد/photo_٢٠٢٦-٠٤-٠٨_١٢-٠٧-١٢.jpg" alt=""></div>
-                <div class="swiper-slide w-[300px] h-[450px] "><img
-                        class="w-full h-full object-cover rounded-xl ring-2 ring-amber-300"
-                        src="images/مجلد جديد/photo_٢٠٢٦-٠٤-٠٨_١٢-٠٧-١٣ (2).jpg" alt=""></div>
-
+                    <p class="text-lg">المجال: الطب</p>
+                    <span class="text-sm">الإنجاز: من كبار أطباء الأندلس</span>
+                </div><!-- overlay4 -->
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination "></div>
+        </div><!-- card-4 -->
 
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+    </div><!-- container   -->
 
-            <!-- If we need scrollbar -->
-            <!-- <div class="swiper-scrollbar"></div>
+</section> <!-- section-3   -->
+
+
+
+<section id="sec4" class="w-full min-h-screen bg-emerald-950 flex justify-center items-center my-10">
+    <!-- Slider main container -->
+    <div class="swiper w-[80%] h-[80vh]">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper py-4">
+            <!-- Slides -->
+            <div class="swiper-slide w-[300px] h-[450px] "><img
+                    class="w-full h-full object-cover rounded-xl ring-2 ring-amber-400"
+                    src="images/مجلد جديد/photo_٢٠٢٦-٠٤-٠٨_١٢-٠٧-٠٨.jpg" alt=""></div>
+            <div class="swiper-slide w-[300px] h-[450px] "><img
+                    class="w-full h-full object-cover rounded-xl ring-2 ring-amber-300"
+                    src="images/مجلد جديد/photo_٢٠٢٦-٠٤-٠٨_١٢-٠٧-٠٩.jpg" alt=""></div>
+            <div class="swiper-slide w-[300px] h-[450px] "><img
+                    class="w-full h-full object-cover rounded-xl ring-2 ring-amber-300"
+                    src="images/مجلد جديد/photo_٢٠٢٦-٠٤-٠٨_١٢-٠٧-١٠.jpg" alt=""></div>
+            <div class="swiper-slide w-[300px] h-[450px] "><img
+                    class="w-full h-full object-cover rounded-xl ring-2 ring-amber-300"
+                    src="images/مجلد جديد/photo_٢٠٢٦-٠٤-٠٨_١٢-٠٧-١٢ (2).jpg" alt=""></div>
+            <div class="swiper-slide w-[300px] h-[450px] "><img
+                    class="w-full h-full object-cover rounded-xl ring-2 ring-amber-300"
+                    src="images/مجلد جديد/photo_٢٠٢٦-٠٤-٠٨_١٢-٠٧-١٢.jpg" alt=""></div>
+            <div class="swiper-slide w-[300px] h-[450px] "><img
+                    class="w-full h-full object-cover rounded-xl ring-2 ring-amber-300"
+                    src="images/مجلد جديد/photo_٢٠٢٦-٠٤-٠٨_١٢-٠٧-١٣ (2).jpg" alt=""></div>
+
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination "></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <!-- <div class="swiper-scrollbar"></div>
         </div> -->
 
-    </section> <!-- section-4   -->
+</section> <!-- section-4   -->
 
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-
-
-    <script>
-        var swiper = new Swiper(".swiper", {
-            effect: "coverflow",
-            grabCursor: true,
-            centeredSlides: true,
-            loop: true,
-            slidesPerView: "auto",
-            autoplay: {
-                delay: 1000
-            },
-            coverflowEffect: {
-                rotate: 0,
-                stretch: 0,
-                depth: 200,
-                modifier: 3,
-                slideShadows: true,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-        });
-    </script>
 
 
 
-    <script src="js/script.js"></script>
+<footer id="footer" class="bg-stone-100 py-12 px-6">
+    <div class="max-w-4xl mx-auto text-center space-y-8">
+        <h2 class="text-3xl font-bold text-emerald-950">تواصل معنا</h2>
 
-    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
-    <script>
-        const player = new Plyr('#player');
-    </script>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div
+                class="p-8 rounded-3xl shadow-[20px_20px_60px_#bebebe,-20px_-20px_60px_#ffffff] hover:shadow-lg hover:shadow-amber-600  transition-all duration-500">
+                <i class="fa-solid fa-envelope text-amber-600 text-2xl mb-4"></i>
+                <p class="font-bold">البريد الإلكتروني</p>
+            </div>
+            <div
+                class="p-8 rounded-3xl shadow-[20px_20px_60px_#bebebe,-20px_-20px_60px_#ffffff] hover:shadow-lg hover:shadow-amber-600  transition-all duration-500">
+                <i class="fa-solid fa-location-dot text-amber-600 text-2xl mb-4"></i>
+                <p class="font-bold">غرناطة، الأندلس</p>
+            </div>
+            <div
+                class="p-8 rounded-3xl shadow-[20px_20px_60px_#bebebe,-20px_-20px_60px_#ffffff] hover:shadow-lg hover:shadow-amber-600 transition-all duration-500">
+                <i class="fa-brands fa-github text-amber-600 text-2xl mb-4"></i>
+                <p class="font-bold">تابعنا على جيت هاب</p>
+            </div>
+        </div>
 
-    <style>
-        :root {
-            --plyr-color-main: #b45309;
-            --plyr-video-border-radius: 1rem;
+        <p class="pt-10 text-gray-500 text-sm">جميع الحقوق محفوظة &copy; 2026 - بوابة الأندلس</p>
+    </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+
+<script>
+    var swiper = new Swiper(".swiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        loop: true,
+        slidesPerView: "auto",
+        autoplay: {
+            delay: 1000
+        },
+        coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 200,
+            modifier: 3,
+            slideShadows: true,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+</script>
+
+
+
+<script src="js/script.js"></script>
+
+<script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+<script>
+    const player = new Plyr('#player');
+</script>
+
+<style>
+    :root {
+        --plyr-color-main: #b45309;
+        --plyr-video-border-radius: 1rem;
+    }
+
+    .plyr {
+        height: 100% !important;
+        width: 100% !important;
+        border-radius: 1rem;
+        overflow: hidden;
+    }
+
+    @media (min-width: 768px) {
+        .plyr video {
+            object-fit: cover;
         }
+    }
 
-        .plyr {
-            height: 100% !important;
-            width: 100% !important;
-            border-radius: 1rem;
-            overflow: hidden;
+    @media (max-width: 767px) {
+        .plyr video {
+            object-fit: contain;
         }
+    }
+</style>
 
-        @media (min-width: 768px) {
-            .plyr video {
-                object-fit: cover;
-            }
-        }
+<script>
+    AOS.init();
 
-        @media (max-width: 767px) {
-            .plyr video {
-                object-fit: contain;
-            }
-        }
-    </style>
+</script>
+<script>
 
-    <script>
-        AOS.init();
-
-    </script>
-    <script>
-
-    </script>
+</script>
 </body>
 
 </html>

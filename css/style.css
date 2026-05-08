@@ -40,143 +40,26 @@ html {
     border-radius: 200px;
 }
 
-/* 
-@media(max-width:567px) {
-    .change {
-        animation: change1 5s linear infinite alternate-reverse;
-    }
+.pattern {
+    position: absolute;
+    inset: 0;
 
-    @keyframes change1 {
-        from {
-            transform: translateX(-60vw);
-        }
+    pointer-events: none;
+    z-index: 0;
+    background-image:
+        radial-gradient(rgba(255, 255, 255, 0.08) 2px, transparent 2px);
 
-        to {
-            transform: translateX(60vw);
+    background-size: 40px 40px;
 
-        }
-    }
-
-} */
-
-
-/* .carousel {
-    width: 90%;
-    border: 5px solid red;
-    margin: 100px auto;
-    display: flex;
-    overflow-x: auto;
+    animation: movePattern 10s linear infinite;
 }
 
-.carousel::-webkit-scrollbar {
-    display: none;
-}
-
-.slider {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: spin 10s infinite linear;
-    padding-right: 1rem;
-}
-
-.slider img {
-    padding: 1rem;
-    border-radius: 2rem;
-    text-align: center;
-    align-content: center;
-}
-
-@keyframes spin {
+@keyframes movePattern {
     from {
-        transform: translateX(0);
+        transform: translateY(0);
     }
 
     to {
-        transform: translateX(-1000);
-
-    }
-} */
-
-/* .slider:hover {
-    animation-play-state: paused;
-} */
-
-/* body {
-  background: #111;
-  padding: 40px;
-} */
-
-/* .carousel {
-    overflow: hidden;
-    width: 900px;
-    margin: auto;
-    border: 2px solid red;
-}
-
-.track {
-    display: flex;
-    gap: 20px;
-    width: max-content;
-    animation: move 10s linear infinite;
-}
-
-.card {
-    min-width: 180px;
-    height: 240px;
-    background: #222;
-    color: gold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    border: 1px solid gold;
-}
-
-@keyframes move {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
- */
-
-
-
-.carousel {
-    overflow: hidden;
-    width: 100%;
-    max-width: 900px;
-    margin: auto;
-    border: 2px solid red;
-}
-
-.track {
-    display: flex;
-    gap: 20px;
-    width: max-content;
-    will-change: transform;
-}
-
-.card {
-    flex: 0 0 auto;
-    width: 180px;
-    height: 240px;
-    background: #222;
-    color: gold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    border: 1px solid gold;
-}
-
-/* تحسين الموبايل */
-@media (max-width: 600px) {
-    .card {
-        width: 140px;
-        height: 180px;
+        transform: translateY(40px);
     }
 }
