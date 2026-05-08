@@ -60,17 +60,145 @@ window.addEventListener("load", () => {
     }, 500);
 });
 
-window.addEventListener("scroll", function () {
+// window.addEventListener("scroll", function () {
 
-    let scroll = document.documentElement.scrollTop
-    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight
+//     let scroll = document.documentElement.scrollTop
+//     let height = document.documentElement.scrollHeight - document.documentElement.clientHeight
 
-    let progress = (scroll / height) * 100
+//     let progress = (scroll / height) * 100
 
-    document.getElementById("progressBar").style.width = progress + "%"
+//     document.getElementById("progressBar").style.width = progress + "%"
+
+// })
+
+
+let cursor = document.getElementById("cursor")
+let glow = document.getElementById("cursorGlow")
+let progressBar = document.getElementById("progressBar")
+
+/* Andalusian Star Shape */
+cursor.style.clipPath = `
+polygon(
+50% 0%,
+61% 35%,
+100% 50%,
+61% 65%,
+50% 100%,
+39% 65%,
+0% 50%,
+39% 35%
+)
+`
+
+cursor.style.transform = "translate(-50%, -50%) rotate(45deg)"
+
+
+
+/* Cursor Movement */
+document.addEventListener("mousemove", (e) => {
+
+    let x = e.clientX
+    let y = e.clientY
+
+    cursor.style.left = x + "px"
+    cursor.style.top = y + "px"
+
+    glow.style.left = x + "px"
+    glow.style.top = y + "px"
 
 })
 
+
+/* Cursor Rotation Animation */
+let rotate = 45
+
+document.addEventListener("mousemove", () => {
+
+    rotate += 8
+
+    cursor.style.transform =
+        `translate(-50%, -50%) rotate(${rotate}deg)`
+
+})
+
+
+
+/* Hover Effects */
+let hoverItems = document.querySelectorAll("a, button")
+
+hoverItems.forEach((item) => {
+
+    item.addEventListener("mouseenter", () => {
+
+        cursor.classList.add(
+            "scale-150",
+            "shadow-[0_0_30px_rgba(255,215,0,1)]"
+        )
+
+        glow.classList.add(
+            "scale-150",
+            "bg-yellow-300/30"
+        )
+
+    })
+
+    item.addEventListener("mouseleave", () => {
+
+        cursor.classList.remove(
+            "scale-150",
+            "shadow-[0_0_30px_rgba(255,215,0,1)]"
+        )
+
+        glow.classList.remove(
+            "scale-150",
+            "bg-yellow-300/30"
+        )
+
+    })
+
+})
+
+
+
+/* Scroll Progress */
+window.addEventListener("scroll", () => {
+
+    let scrollTop = window.scrollY
+
+    let height =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight
+
+    let progress = (scrollTop / height) * 100
+
+    progressBar.style.width = progress + "%"
+
+
+
+    /* Dynamic Color Change */
+
+    if (progress < 30) {
+
+        progressBar.className =
+            "fixed top-0 right-0 h-[5px] z-[99999] bg-gradient-to-l from-emerald-700 to-green-400 shadow-[0_0_20px_rgba(16,185,129,.7)]"
+
+    }
+
+    else if (progress < 70) {
+
+        progressBar.className =
+            "fixed top-0 right-0 h-[5px] z-[99999] bg-gradient-to-l from-lime-500 to-yellow-400 shadow-[0_0_20px_rgba(250,204,21,.7)]"
+
+    }
+
+    else {
+
+        progressBar.className =
+            "fixed top-0 right-0 h-[5px] z-[99999] bg-gradient-to-l from-yellow-400 to-amber-600 shadow-[0_0_25px_rgba(212,175,55,1)]"
+
+    }
+
+})
 
 AOS.init();
 
