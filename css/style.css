@@ -67,6 +67,7 @@ html {
 
 .swiper {
     overflow: hidden;
+    --swiper-navigation-color: #d97706;
 }
 
 .swiper-wrapper {
@@ -78,9 +79,6 @@ html {
     height: 450px !important;
 }
 
-.swiper {
-    --swiper-navigation-color: #d97706;
-}
 
 .swiper-button-prev,
 .swiper-button-next {
@@ -104,7 +102,6 @@ html {
 .swiper-button-prev:hover {
     --swiper-navigation-color: white;
 }
-
 
 @media (min-width: 1024px) {
     .swiper-pagination {
