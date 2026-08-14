@@ -47,6 +47,14 @@ document.querySelectorAll("#menuMobile a").forEach(link => {
     });
 });
 
+document.addEventListener("click", e => {
+    if (!menu.contains(e.target) && !btn.contains(e.target)) {
+        menu.classList.add("hidden");
+        icon.classList.add("fa-bars");
+        icon.classList.remove("fa-xmark");
+    }
+})
+
 window.onload = function () {
     document.getElementById("loader").style.display = "none"
 }
