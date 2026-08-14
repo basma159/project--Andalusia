@@ -68,16 +68,38 @@ window.addEventListener("load", () => {
     }, 500);
 });
 
-// window.addEventListener("scroll", function () {
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
 
-//     let scroll = document.documentElement.scrollTop
-//     let height = document.documentElement.scrollHeight - document.documentElement.clientHeight
+        if (entry.isIntersecting) {
 
-//     let progress = (scroll / height) * 100
+            navLinks.forEach((link) => {
+                link.classList.remove("active");
+            });
 
-//     document.getElementById("progressBar").style.width = progress + "%"
+            const activeLink = document.querySelector(
+                `.nav-link[href="#${entry.target.id}"]`
+            );
 
-// })
+            if (activeLink) {
+                activeLink.classList.add("active");
+            }
+        }
+    });
+}, {
+    rootMargin: "-100px 0px -60% 0px"
+});
+
+window.addEventListener("scroll", function () {
+
+    let scroll = document.documentElement.scrollTop
+    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight
+
+    let progress = (scroll / height) * 100
+
+    document.getElementById("progressBar").style.width = progress + "%"
+
+})
 
 
 let cursor = document.getElementById("cursor")
