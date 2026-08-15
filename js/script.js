@@ -139,14 +139,14 @@ window.addEventListener("scroll", () => {
     if (progress < 30) {
 
         progressBar.className =
-            "fixed top-0 right-0 h-[5px] z-[99999] bg-gradient-to-l from-emerald-700 to-green-400 shadow-[0_0_20px_rgba(16,185,129,.7)]"
+            "fixed top-0 right-0 h-[5px] z-[99999] bg-gradient-to-l from-emerald-700 to-green-700 shadow-[0_0_20px_rgba(16,185,129,.7)]"
 
     }
 
     else if (progress < 70) {
 
         progressBar.className =
-            "fixed top-0 right-0 h-[5px] z-[99999] bg-gradient-to-l from-lime-500 to-yellow-400 shadow-[0_0_20px_rgba(250,204,21,.7)]"
+            "fixed top-0 right-0 h-[5px] z-[99999] bg-gradient-to-l from-lime-500 to-yellow-600 shadow-[0_0_20px_rgba(250,204,21,.7)]"
 
     }
 
