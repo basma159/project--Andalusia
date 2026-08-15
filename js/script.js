@@ -1,24 +1,5 @@
 
 
-
-
-// let  btn =document.querySelector(".menuBtn")
-// let menu =document.querySelector("#nav1")
-// let icon =document.querySelector(".icon")
-
-
-// btn.addEventListener("click",function(){
-//     menu.classList.toggle("hidden")
-//     if (menu.classList.contains("hidden")){
-//         icon.classList.remove("fa-xmark")
-//         icon.classList.add("fa-bars")
-//     }
-//     else{
-//          icon.classList.remove("fa-bars")
-//         icon.classList.add("fa-xmark")
-//     }
-// })
-
 let btn = document.getElementById("menuBtn")
 let menu = document.getElementById("menuMobile")
 let icon = document.getElementById("menuId")
@@ -101,58 +82,6 @@ window.addEventListener("scroll", function () {
 
 })
 
-
-let cursor = document.getElementById("cursor")
-let glow = document.getElementById("cursorGlow")
-let progressBar = document.getElementById("progressBar")
-
-/* Andalusian Star Shape */
-cursor.style.clipPath = `
-polygon(
-50% 0%,
-61% 35%,
-100% 50%,
-61% 65%,
-50% 100%,
-39% 65%,
-0% 50%,
-39% 35%
-)
-`
-
-cursor.style.transform = "translate(-50%, -50%) rotate(45deg)"
-
-
-
-/* Cursor Movement */
-document.addEventListener("mousemove", (e) => {
-
-    let x = e.clientX
-    let y = e.clientY
-
-    cursor.style.left = x + "px"
-    cursor.style.top = y + "px"
-
-    glow.style.left = x + "px"
-    glow.style.top = y + "px"
-
-})
-
-
-/* Cursor Rotation Animation */
-let rotate = 45
-
-document.addEventListener("mousemove", () => {
-
-    rotate += 8
-
-    cursor.style.transform =
-        `translate(-50%, -50%) rotate(${rotate}deg)`
-
-})
-
-
-
 /* Hover Effects */
 let hoverItems = document.querySelectorAll("a, button")
 
@@ -231,47 +160,3 @@ window.addEventListener("scroll", () => {
 })
 
 AOS.init();
-
-const track = document.querySelector(".track");
-
-// 1. ننسخ العناصر تلقائي
-const cards = Array.from(track.children);
-cards.forEach(card => {
-    const clone = card.cloneNode(true);
-    track.appendChild(clone);
-});
-
-let position = 0;
-let speed = 1;
-let isPaused = false;
-
-// عرض العنصر الواحد تقريبًا
-const cardWidth = cards[0].offsetWidth + 20;
-
-function animate() {
-    if (!isPaused) {
-        position -= speed;
-
-        // لما نوصل لنص العناصر نرجع للبداية بس بدون ما نحس
-        if (Math.abs(position) >= track.scrollWidth / 2) {
-            position = 0;
-        }
-
-        track.style.transform = `translateX(${position}px)`;
-    }
-
-    requestAnimationFrame(animate);
-}
-
-animate();
-
-// 2. pause عند hover
-track.addEventListener("mouseenter", () => {
-    isPaused = true;
-});
-
-track.addEventListener("mouseleave", () => {
-    isPaused = false;
-});
-
-
