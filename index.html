@@ -54,7 +54,7 @@
     <header class=" w-full fixed top-0 right-0 z-40 bg-amber-700/80 backdrop-blur-md py-4 px-4 shadow-2xl flex 
         justify-around items-center gap-8 lg:gap-20 ">
 
-        <ul class="hidden md:flex gap-2 lg:gap-6 font-bold transition-all text-sm lg:text-lg">
+        <ul class="hidden md:flex gap-2 lg:gap-6 font-bold transition-all text-xs lg:text-lg">
             <li class="p-4 text-white hover:bg-emerald-950 hover:transition-all hover:duration-300 hover:rounded-3xl">
                 <a href="#main" class="nav-link">الرئيسية</a>
             </li>
@@ -117,8 +117,8 @@
         </ul>
         <div
             class="flex shrink-0 gap-2 p-2 justify-center items-center rounded-2xl shadow-md lg:shadow-lg shadow-black/30">
-            <h3 class="text-white font-extrabold lg:text-2xl">حضارة الأندلس</h3>
-            <img src="images/2.jpeg" class="rounded-2xl" width="50" height="50" alt="">
+            <h3 class="text-white font-extrabold text-base md:text-xl lg:text-2xl">حضارة الأندلس</h3>
+            <img src="images/2.jpeg" class="rounded-2xl w-12 h-12" alt="">
         </div>
     </header>
 
@@ -280,7 +280,7 @@
                                 طريف بن مالك
                             </h3>
 
-                            <p class="text-gray-600 mt-3 leading-relaxed">
+                            <p class="text-gray-600 mt-3 leading-relaxed h-28">
                                 قاد حملة استطلاعية إلى جنوب الأندلس
                                 ومهّد الطريق للفتح الكبير.
                             </p>
@@ -317,7 +317,7 @@
                                 طارق بن زياد
                             </h3>
 
-                            <p class="text-gray-600 mt-3 leading-relaxed">
+                            <p class="text-gray-600 mt-3 leading-relaxed h-28">
                                 قاد الجيش الذي عبر إلى الأندلس سنة 711م
                                 وحقق انتصارات حاسمة في بداية الفتح.
                             </p>
@@ -353,7 +353,7 @@
                                 موسى بن نصير
                             </h3>
 
-                            <p class="text-gray-600 mt-3 leading-relaxed">
+                            <p class="text-gray-600 mt-3 leading-relaxed h-28">
                                 عبر إلى الأندلس واستكمل فتح عدد من المدن
                                 بعد حملة طارق بن زياد.
                             </p>
@@ -478,13 +478,12 @@
     </section> <!-- section-3   -->
 
 
-
     <section id="sec4"
         class="w-full lg:min-h-screen bg-emerald-950 flex flex-col justify-center items-center my-10 py-5 scroll-mt-24">
         <h2 class="font-bold text-amber-500 text-3xl pt-3">من معالم الحضارة</h2>
 
         <!-- Slider main container -->
-        <div class="swiper w-[80%] h-[84vh] md:h-[90vh] pb-4">
+        <div class="swiper w-[80%] h-[84vh] md:h-fit lg:h-[90vh] pb-4">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper py-4">
                 <!-- Slides -->
@@ -539,11 +538,6 @@
     </section> <!-- section-4   -->
 
 
-
-
-
-
-
     <footer id="footer" class="bg-stone-100 py-12 px-6">
         <div class="max-w-4xl mx-auto text-center space-y-8">
             <h2 class="text-3xl font-bold text-emerald-950">تواصل معنا</h2>
@@ -593,7 +587,7 @@
             loop: true,
             slidesPerView: "auto",
             autoplay: {
-                delay: 1000
+                delay: 3000
             },
             coverflowEffect: {
                 rotate: 0,

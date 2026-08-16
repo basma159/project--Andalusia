@@ -26,13 +26,16 @@ body {
 html {
     scroll-behavior: smooth;
 }
-.nav-link{
+
+.nav-link {
     color: white;
     transition: all .3s ease;
 }
-.nav-link:active{
+
+.nav-link:active {
     color: #f59e0b !important;
 }
+
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -104,6 +107,12 @@ html {
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
     --swiper-navigation-color: white;
+}
+
+@media (min-width: 770px) {
+    .swiper-pagination {
+        bottom: -8px !important;
+    }
 }
 
 @media (min-width: 1024px) {
