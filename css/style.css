@@ -109,12 +109,6 @@ html {
     --swiper-navigation-color: white;
 }
 
-@media (min-width: 770px) {
-    .swiper-pagination {
-        bottom: -8px !important;
-    }
-}
-
 @media (min-width: 1024px) {
     .swiper-pagination {
         bottom: -5px !important;
